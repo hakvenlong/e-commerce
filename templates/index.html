@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'includes/head.html' %}
+<body>
+    <header>
+        {% include 'includes/navbar.html' %}
+    </header>
+
+    <main class="container">
+        <section id="slider" data-aos="fade-up">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div id="slider-carousel" class="carousel slide" data-bs-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-bs-target="#slider-carousel" data-bs-slide-to="0" class="active"></li>
+                                <li data-bs-target="#slider-carousel" data-bs-slide-to="1"></li>
+                                <li data-bs-target="#slider-carousel" data-bs-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="row">
+                                        <div class="col-sm-6 d-flex align-items-center" data-aos="fade-right">
+                                            <div>
+                                                <h1><span>You Got
+                                                        This</span></h1>
+                                                <h2>Impossible is
+                                                    Nothing</h2>
+                                                <p>It represented pushing
+                                                    boundaries and striving
+                                                    for the impossible
+                                                    in sports and life.</p>
+                                                <button type="button" class="btn btn-primary get mb-3"
+                                                    aria-label="Get it now">Get
+                                                    it now</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6" data-aos="fade-left">
+                                            <img src="{{ url_for('static', filename='shop/slider1.png') }}"
+                                                class="girl img-fluid" alt="Fashion Model 1" loading="lazy" />
+                                            <img src="{{ url_for('static', filename='shop/logo-image.png') }}"
+                                                class="pricing" alt="Pricing Badge" loading="lazy" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-sm-6 d-flex align-items-center" data-aos="fade-right">
+                                            <div>
+                                                <h1><span>Just do
+                                                        it</span></h1>
+                                                <h2>Greatness is earned,
+                                                    never awarded</h2>
+                                                <p>The harder you push, the
+                                                    more you are pulled.
+                                                    Take the high road
+                                                    and go higher. Giving up
+                                                    is simply not an
+                                                    option</p>
+                                                <button type="button" class="btn btn-primary get mb-3"
+                                                    aria-label="Get it now">Get
+                                                    it now</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6" data-aos="fade-left">
+                                            <img src="{{ url_for('static', filename='shop/slider2.png') }}"
+                                                class="girl img-fluid" alt="Fashion Model 2" loading="lazy" />
+                                            <img src="{{ url_for('static', filename='shop/logo-image2.png') }}"
+                                                class="pricing" alt="Pricing Badge" loading="lazy" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row">
+                                        <div class="col-sm-6 d-flex align-items-center" data-aos="fade-right">
+                                            <div>
+                                                <h1><span>O</span>ur
+                                                    Turn</h1>
+                                                <h2>It signifies a time for
+                                                    action and empowerment,
+                                                    encouraging
+                                                    individuals to make
+                                                    their mark on the
+                                                    world.</h2>
+                                                <button type="button" class="btn btn-primary get mb-3"
+                                                    aria-label="Get it now">Get
+                                                    it now</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6" data-aos="fade-left">
+                                            <img src="{{ url_for('static', filename='shop/slider3.png') }}"
+                                                class="girl img-fluid" alt="Fashion Model 3" loading="lazy" />
+                                            <img src="{{ url_for('static', filename='shop/logo-image3.png') }}"
+                                                class="pricing" alt="Pricing Badge" loading="lazy" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#slider-carousel" class="carousel-control-prev" data-bs-slide="prev"
+                                aria-label="Previous slide">
+                                <i class="fas fa-angle-left"></i>
+                                <span class="visually-hidden">Previous</span>
+                            </a>
+                            <a href="#slider-carousel" class="carousel-control-next" data-bs-slide="next"
+                                aria-label="Next slide">
+                                <i class="fas fa-angle-right"></i>
+                                <span class="visually-hidden">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Today's Deals -->
+        <section class="todays-deals" data-aos="fade-up">
+            <h2>Today's For You!</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+                <div class="col">
+                    <div class="card h-100 position-relative" data-aos="zoom-in" data-id="1"
+                        data-name="Real Madrid Terrace Icons Tee" data-price="179.00"
+                        data-image="{{ url_for('static', filename='shop/image6.png') }}"
+                        data-categories="sportswear,clothing" data-brand="adidas">
+                        <figure>
+                            <img src="{{ url_for('static', filename='shop/image6.png') }}" class="card-img-top"
+                                alt="Real Madrid Terrace Icons Tee" loading="lazy">
+                        </figure>
+                        <div class="card-body">
+                            <h5 class="card-title">Real Madrid Terrace Icons Tee</h5>
+                            <p class="card-text">Stylish jersey for sunny days.</p>
+                            <p class="rating"><span class="star">★</span> 4.9 · 10K+ Sold</p>
+                            <p class="price">$179.00 <del>$279.00</del></p>
+                            <div class="card-actions">
+                                <button class="btn btn-outline-secondary btn-add btn-add-wishlist mb-3"
+                                    aria-label="Add to Wishlist">Add to Wishlist</button>
+                                <button class="btn btn-primary btn-add btn-add-cart mb-3" aria-label="Add to Cart">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 position-relative" data-aos="zoom-in" data-id="2"
+                        data-name="Barcelona Terrace Icons Jersey" data-price="99.00"
+                        data-image="{{ url_for('static', filename='shop/image7.png') }}"
+                        data-categories="sportswear,clothing" data-brand="nike">
+                        <figure>
+                            <img src="{{ url_for('static', filename='shop/image7.png') }}" class="card-img-top"
+                                alt="Barcelona Terrace Icons Tee" loading="lazy">
+                        </figure>
+                        <div class="card-body">
+                            <h5 class="card-title">Barcelona Terrace Icons Jersey</h5>
+                            <p class="card-text">Stylish jersey for sunny days.</p>
+                            <p class="rating"><span class="star">★</span> 4.8 · 8K+ Sold</p>
+                            <p class="price">$99.00 <del>$120.00</del></p>
+                            <div class="card-actions">
+                                <button class="btn btn-outline-secondary btn-add btn-add-wishlist mb-3"
+                                    aria-label="Add to Wishlist">Add to Wishlist</button>
+                                <button class="btn btn-primary btn-add btn-add-cart mb-3" aria-label="Add to Cart">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 position-relative" data-aos="zoom-in" data-id="3"
+                        data-name="Block Jacket (Gender Neutral)" data-price="250.00"
+                        data-image="{{ url_for('static', filename='shop/image8.png') }}"
+                        data-categories="mens,womens,clothing" data-brand="puma">
+                        <figure>
+                            <img src="{{ url_for('static', filename='shop/image8.png') }}" class="card-img-top"
+                                alt="Block Jacket (Gender Neutral)" loading="lazy">
+                        </figure>
+                        <div class="card-body">
+                            <h5 class="card-title">Block Jacket (Gender Neutral)</h5>
+                            <p class="card-text">Stylish jacket for all genders.</p>
+                            <p class="rating"><span class="star">★</span> 4.7 · 5K+ Sold</p>
+                            <p class="price">$250.00 <del>$300.00</del></p>
+                            <div class="card-actions">
+                                <button class="btn btn-outline-secondary btn-add btn-add-wishlist mb-3"
+                                    aria-label="Add to Wishlist">Add to Wishlist</button>
+                                <button class="btn btn-primary btn-add btn-add-cart mb-3" aria-label="Add to Cart">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 position-relative" data-aos="zoom-in" data-id="4"
+                        data-name="Wardour SPZL Vest" data-price="290.00"
+                        data-image="{{ url_for('static', filename='shop/image9.png') }}" data-categories="mens,clothing"
+                        data-brand="reebok">
+                        <figure>
+                            <img src="{{ url_for('static', filename='shop/image9.png') }}" class="card-img-top"
+                                alt="Wardour SPZL Vest" loading="lazy">
+                        </figure>
+                        <div class="card-body">
+                            <h5 class="card-title">Wardour SPZL Vest</h5>
+                            <p class="card-text">Stylish vest for layering.</p>
+                            <p class="rating"><span class="star">★</span> 4.9 · 10K+ Sold</p>
+                            <p class="price">$290.00</p>
+                            <div class="card-actions">
+                                <button class="btn btn-outline-secondary btn-add btn-add-wishlist mb-3"
+                                    aria-label="Add to Wishlist">Add to Wishlist</button>
+                                <button class="btn btn-primary btn-add btn-add-cart mb-3" aria-label="Add to Cart">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Selling Store -->
+        <section class="best-selling" data-aos="fade-up">
+            <h2>Best Selling Products</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+                <div class="col">
+                    <div class="card h-100 position-relative" data-aos="zoom-in" data-id="5"
+                        data-name="Future Style Woven Pants" data-price="120.00"
+                        data-image="{{ url_for('static', filename='shop/image10.png') }}"
+                        data-categories="mens,clothing" data-brand="underarmour">
+                        <figure>
+                            <img src="{{ url_for('static', filename='shop/image10.png') }}" class="card-img-top"
+                                alt="Future Style Woven Pants" loading="lazy">
+                        </figure>
+                        <div class="card-body">
+                            <h5 class="card-title">Future Style Woven Pants</h5>
+                            <p class="card-text">Comfortable woven pants for everyday wear.</p>
+                            <p class="price">$120.00</p>
+                            <div class="card-actions">
+                                <button class="btn btn-outline-secondary btn-add btn-add-wishlist mb-3"
+                                    aria-label="Add to Wishlist">Add to Wishlist</button>
+                                <button class="btn btn-primary btn-add btn-add-cart mb-3" aria-label="Add to Cart">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 position-relative" data-aos="zoom-in" data-id="6"
+                        data-name="Multi Pocket Pant" data-price="250.00"
+                        data-image="{{ url_for('static', filename='shop/image11.png') }}"
+                        data-categories="mens,clothing" data-brand="newbalance">
+                        <figure>
+                            <img src="{{ url_for('static', filename='shop/image11.png') }}" class="card-img-top"
+                                alt="Multi Pocket Pant" loading="lazy">
+                        </figure>
+                        <div class="card-body">
+                            <h5 class="card-title">Multi Pocket Pant</h5>
+                            <p class="card-text">Trendy and durable pants with multiple pockets.</p>
+                            <p class="price">$250.00</p>
+                            <div class="card-actions">
+                                <button class="btn btn-outline-secondary btn-add btn-add-wishlist mb-3"
+                                    aria-label="Add to Wishlist">Add to Wishlist</button>
+                                <button class="btn btn-primary btn-add btn-add-cart mb-3" aria-label="Add to Cart">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 position-relative" data-aos="zoom-in" data-id="7"
+                        data-name="Sporty & Rich Shorts" data-price="350.00"
+                        data-image="{{ url_for('static', filename='shop/image12.png') }}"
+                        data-categories="sportswear,clothing" data-brand="asics">
+                        <figure>
+                            <img src="{{ url_for('static', filename='shop/image12.png') }}" class="card-img-top"
+                                alt="Sporty & Rich Shorts" loading="lazy">
+                        </figure>
+                        <div class="card-body">
+                            <h5 class="card-title">Sporty & Rich Shorts</h5>
+                            <p class="card-text">Casual and comfortable shorts for summer.</p>
+                            <p class="price">$350.00</p>
+                            <div class="card-actions">
+                                <button class="btn btn-outline-secondary btn-add btn-add-wishlist mb-3"
+                                    aria-label="Add to Wishlist">Add to Wishlist</button>
+                                <button class="btn btn-primary btn-add btn-add-cart mb-3" aria-label="Add to Cart">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 position-relative" data-aos="zoom-in" data-id="8" data-name="Polo Dress"
+                        data-price="200.00" data-image="{{ url_for('static', filename='shop/image1.png') }}"
+                        data-categories="womens,clothing" data-brand="nike">
+                        <figure>
+                            <img src="{{ url_for('static', filename='shop/image1.png') }}" class="card-img-top"
+                                alt="Polo Dress" loading="lazy">
+                        </figure>
+                        <div class="card-body">
+                            <h5 class="card-title">Polo Dress</h5>
+                            <p class="card-text">Stylish and comfortable polo dress</p>
+                            <p class="price">$200.00</p>
+                            <div class="card-actions">
+                                <button class="btn btn-outline-secondary btn-add btn-add-wishlist mb-3"
+                                    aria-label="Add to Wishlist">Add to Wishlist</button>
+                                <button class="btn btn-primary btn-add btn-add-cart mb-3" aria-label="Add to Cart">Add
+                                    to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer bg-dark text-white">
+        {% include 'includes/footer.html' %}
+    </footer>
+</body>
+</html>

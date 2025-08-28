@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'includes/head.html' %}
+
+<body>
+    <header>
+        {% include 'includes/navbar.html' %}
+    </header>
+    <section id="slider" data-aos="fade-up">
+        <!-- Your existing slider section (unchanged from previous response) -->
+    </section>
+    <main class="container shop-container mb-5">
+        <div class="row">
+            <aside class="col-lg-3 col-md-4 filter-section d-none d-md-block" data-aos="fade-right">
+                <header>
+                    <h2 data-aos="fade-up">Shop Now</h2>
+                    <h4>Filters</h4>
+                </header>
+
+                <section class="mb-3">
+                    <label class="form-label">Price Range</label>
+                    <input type="range" class="form-range" min="0" max="500" id="priceRange"
+                        aria-label="Price range filter" value="500">
+                    <output class="price-range-value">$0 - $500</output>
+                </section>
+
+                <section>
+                    <h3 class="form-label">Categories</h3>
+                    <ul class="list-unstyled">
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" id="sportswear">
+                            <label class="form-check-label" for="sportswear">Sportswear</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" id="mens">
+                            <label class="form-check-label" for="mens">Mens</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" id="womens">
+                            <label class="form-check-label" for="womens">Womens</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" id="kids">
+                            <label class="form-check-label" for="kids">Kids</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" id="fashion">
+                            <label class="form-check-label" for="fashion">Fashion</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" id="households">
+                            <label class="form-check-label" for="households">Households</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" id="interiors">
+                            <label class="form-check-label" for="interiors">Interiors</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" id="clothing">
+                            <label class="form-check-label" for="clothing">Clothing</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" id="bags">
+                            <label class="form-check-label" for="bags">Bags</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" id="shoes">
+                            <label class="form-check-label" for="shoes">Shoes</label>
+                        </li>
+                    </ul>
+                </section>
+
+                <hr>
+
+                <section>
+                    <h3 class="form-label">Brands</h3>
+                    <ul class="list-unstyled">
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" id="nike">
+                            <label class="form-check-label" for="nike">Nike</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" id="adidas">
+                            <label class="form-check-label" for="adidas">Adidas</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" id="puma">
+                            <label class="form-check-label" for="puma">Puma</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" id="reebok">
+                            <label class="form-check-label" for="reebok">Reebok</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" id="underarmour">
+                            <label class="form-check-label" for="underarmour">Under Armour</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" id="newbalance">
+                            <label class="form-check-label" for="newbalance">New Balance</label>
+                        </li>
+                        <li class="form-check">
+                            <input class="form-check-input" type="checkbox" id="asics">
+                            <label class="form-check-label" for="asics">ASICS</label>
+                        </li>
+                    </ul>
+                </section>
+
+            </aside>
+            <!-- Product Grid -->
+            <section class="col-lg-9 col-md-8">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4" id="product-grid">
+                    <div class="col">
+                        <div class="card h-100 position-relative" data-aos="zoom-in" data-id="1"
+                            data-name="Real Madrid Terrace Icons Tee" data-price="179.00"
+                            data-image="{{ url_for('static', filename='shop/image6.png') }}"
+                            data-categories="sportswear,clothing" data-brand="adidas">
+                            <figure>
+                                <img src="{{ url_for('static', filename='shop/image6.png') }}" class="card-img-top"
+                                    alt="Real Madrid Terrace Icons Tee" loading="lazy">
+                            </figure>
+                            <div class="card-body">
+                                <h5 class="card-title">Real Madrid Terrace Icons Tee</h5>
+                                <p class="card-text">Stylish jersey for sunny days.</p>
+                                <p class="rating"><span class="star">★</span> 4.9 · 10K+ Sold</p>
+                                <p class="price">$179.00 <del>$279.00</del></p>
+                                <div class="card-actions">
+                                    <button class="btn btn-outline-secondary btn-add btn-add-wishlist mb-3"
+                                        aria-label="Add to Wishlist">Add to Wishlist</button>
+                                    <button class="btn btn-primary btn-add btn-add-cart mb-3"
+                                        aria-label="Add to Cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 position-relative" data-aos="zoom-in" data-id="2"
+                            data-name="Barcelona Terrace Icons Jersey" data-price="99.00"
+                            data-image="{{ url_for('static', filename='shop/image7.png') }}"
+                            data-categories="sportswear,clothing" data-brand="nike">
+                            <figure>
+                                <img src="{{ url_for('static', filename='shop/image7.png') }}" class="card-img-top"
+                                    alt="Barcelona Terrace Icons Tee" loading="lazy">
+                            </figure>
+                            <div class="card-body">
+                                <h5 class="card-title">Barcelona Terrace Icons Jersey</h5>
+                                <p class="card-text">Stylish jersey for sunny days.</p>
+                                <p class="rating"><span class="star">★</span> 4.8 · 8K+ Sold</p>
+                                <p class="price">$99.00 <del>$120.00</del></p>
+                                <div class="card-actions">
+                                    <button class="btn btn-outline-secondary btn-add btn-add-wishlist mb-3"
+                                        aria-label="Add to Wishlist">Add to Wishlist</button>
+                                    <button class="btn btn-primary btn-add btn-add-cart mb-3"
+                                        aria-label="Add to Cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 position-relative" data-aos="zoom-in" data-id="3"
+                            data-name="Block Jacket (Gender Neutral)" data-price="250.00"
+                            data-image="{{ url_for('static', filename='shop/image8.png') }}"
+                            data-categories="mens,womens,clothing" data-brand="puma">
+                            <figure>
+                                <img src="{{ url_for('static', filename='shop/image8.png') }}" class="card-img-top"
+                                    alt="Block Jacket (Gender Neutral)" loading="lazy">
+                            </figure>
+                            <div class="card-body">
+                                <h5 class="card-title">Block Jacket (Gender Neutral)</h5>
+                                <p class="card-text">Stylish jacket for all genders.</p>
+                                <p class="rating"><span class="star">★</span> 4.7 · 5K+ Sold</p>
+                                <p class="price">$250.00 <del>$300.00</del></p>
+                                <div class="card-actions">
+                                    <button class="btn btn-outline-secondary btn-add btn-add-wishlist mb-3"
+                                        aria-label="Add to Wishlist">Add to Wishlist</button>
+                                    <button class="btn btn-primary btn-add btn-add-cart mb-3"
+                                        aria-label="Add to Cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 position-relative" data-aos="zoom-in" data-id="4"
+                            data-name="Wardour SPZL Vest" data-price="290.00"
+                            data-image="{{ url_for('static', filename='shop/image9.png') }}"
+                            data-categories="mens,clothing" data-brand="reebok">
+                            <figure>
+                                <img src="{{ url_for('static', filename='shop/image9.png') }}" class="card-img-top"
+                                    alt="Wardour SPZL Vest" loading="lazy">
+                            </figure>
+                            <div class="card-body">
+                                <h5 class="card-title">Wardour SPZL Vest</h5>
+                                <p class="card-text">Stylish vest for layering.</p>
+                                <p class="rating"><span class="star">★</span> 4.9 · 10K+ Sold</p>
+                                <p class="price">$290.00</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-outline-secondary btn-add btn-add-wishlist mb-3"
+                                        aria-label="Add to Wishlist">Add to Wishlist</button>
+                                    <button class="btn btn-primary btn-add btn-add-cart mb-3"
+                                        aria-label="Add to Cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 position-relative" data-aos="zoom-in" data-id="5"
+                            data-name="Future Style Woven Pants" data-price="120.00"
+                            data-image="{{ url_for('static', filename='shop/image10.png') }}"
+                            data-categories="mens,clothing" data-brand="underarmour">
+                            <figure>
+                                <img src="{{ url_for('static', filename='shop/image10.png') }}" class="card-img-top"
+                                    alt="Future Style Woven Pants" loading="lazy">
+                            </figure>
+                            <div class="card-body">
+                                <h5 class="card-title">Future Style Woven Pants</h5>
+                                <p class="card-text">Comfortable woven pants for everyday wear.</p>
+                                <p class="price">$120.00</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-outline-secondary btn-add btn-add-wishlist mb-3"
+                                        aria-label="Add to Wishlist">Add to Wishlist</button>
+                                    <button class="btn btn-primary btn-add btn-add-cart mb-3"
+                                        aria-label="Add to Cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 position-relative" data-aos="zoom-in" data-id="6"
+                            data-name="Multi Pocket Pant" data-price="250.00"
+                            data-image="{{ url_for('static', filename='shop/image11.png') }}"
+                            data-categories="mens,clothing" data-brand="newbalance">
+                            <figure>
+                                <img src="{{ url_for('static', filename='shop/image11.png') }}" class="card-img-top"
+                                    alt="Multi Pocket Pant" loading="lazy">
+                            </figure>
+                            <div class="card-body">
+                                <h5 class="card-title">Multi Pocket Pant</h5>
+                                <p class="card-text">Trendy and durable pants with multiple pockets.</p>
+                                <p class="price">$250.00</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-outline-secondary btn-add btn-add-wishlist mb-3"
+                                        aria-label="Add to Wishlist">Add to Wishlist</button>
+                                    <button class="btn btn-primary btn-add btn-add-cart mb-3"
+                                        aria-label="Add to Cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 position-relative" data-aos="zoom-in" data-id="7"
+                            data-name="Sporty & Rich Shorts" data-price="350.00"
+                            data-image="{{ url_for('static', filename='shop/image12.png') }}"
+                            data-categories="sportswear,clothing" data-brand="asics">
+                            <figure>
+                                <img src="{{ url_for('static', filename='shop/image12.png') }}" class="card-img-top"
+                                    alt="Sporty & Rich Shorts" loading="lazy">
+                            </figure>
+                            <div class="card-body">
+                                <h5 class="card-title">Sporty & Rich Shorts</h5>
+                                <p class="card-text">Casual and comfortable shorts for summer.</p>
+                                <p class="price">$350.00</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-outline-secondary btn-add btn-add-wishlist mb-3"
+                                        aria-label="Add to Wishlist">Add to Wishlist</button>
+                                    <button class="btn btn-primary btn-add btn-add-cart mb-3"
+                                        aria-label="Add to Cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 position-relative" data-aos="zoom-in" data-id="8" data-name="Polo Dress"
+                            data-price="200.00" data-image="{{ url_for('static', filename='shop/image1.png') }}"
+                            data-categories="womens,clothing" data-brand="nike">
+                            <figure>
+                                <img src="{{ url_for('static', filename='shop/image1.png') }}" class="card-img-top"
+                                    alt="Polo Dress" loading="lazy">
+                            </figure>
+                            <div class="card-body">
+                                <h5 class="card-title">Polo Dress</h5>
+                                <p class="card-text">Stylish and comfortable polo dress</p>
+                                <p class="price">$200.00</p>
+                                <div class="card-actions">
+                                    <button class="btn btn-outline-secondary btn-add btn-add-wishlist mb-3"
+                                        aria-label="Add to Wishlist">Add to Wishlist</button>
+                                    <button class="btn btn-primary btn-add btn-add-cart mb-3"
+                                        aria-label="Add to Cart">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+   <footer class="footer bg-dark text-white">
+        {% include 'includes/footer.html' %}
+    </footer>
+
+</body>
+</html>

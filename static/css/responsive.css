@@ -1,0 +1,150 @@
+@media (max-width: 992px) {
+    #slider-carousel .girl {
+        max-height: 350px;
+    }
+
+    #slider-carousel .pricing {
+        max-height: 100px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    #slider-carousel h1 {
+        font-size: 2.5rem;
+    }
+
+    #slider-carousel h2 {
+        font-size: 1.8rem;
+    }
+
+    #slider-carousel p {
+        font-size: 1rem;
+    }
+
+    .flash-sale,
+    .todays-deals,
+    .best-selling {
+        padding: 30px 15px;
+        margin: 20px 10px;
+    }
+
+    .flash-sale h2,
+    .todays-deals h2,
+    .best-selling h2 {
+        font-size: 2rem;
+    }
+
+    .card-img-top {
+        height: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    #slider-carousel .girl {
+        max-height: 300px;
+    }
+
+    #slider-carousel .pricing {
+        max-height: 80px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    #slider-carousel h1 {
+        font-size: 2rem;
+    }
+
+    #slider-carousel h2 {
+        font-size: 1.5rem;
+    }
+
+    #slider-carousel .carousel-indicators {
+        bottom: -50px;
+    }
+
+    .flash-sale,
+    .todays-deals,
+    .best-selling {
+        padding: 20px 10px;
+        margin: 15px 5px;
+    }
+
+    .flash-sale h2,
+    .todays-deals h2,
+    .best-selling h2 {
+        font-size: 1.8rem;
+    }
+
+    .card-img-top {
+        height: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    #slider-carousel .girl {
+        max-height: 200px;
+    }
+
+    #slider-carousel .pricing {
+        max-height: 60px;
+        bottom: 10px;
+        right: 10px;
+    }
+
+    #slider-carousel h1 {
+        font-size: 1.8rem;
+    }
+
+    #slider-carousel h2 {
+        font-size: 1.3rem;
+    }
+
+    #slider-carousel p {
+        font-size: 0.9rem;
+    }
+
+    #slider-carousel .get {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    #slider-carousel .carousel-indicators {
+        bottom: -40px;
+    }
+
+    #slider-carousel .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+    }
+
+    .flash-sale h2,
+    .todays-deals h2,
+    .best-selling h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-img-top {
+        height: 100%;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.8rem;
+    }
+
+    .price {
+        font-size: 1rem;
+    }
+
+    .card-actions .btn {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    .footer form .form-control {
+        width: 70%;
+    }
+}

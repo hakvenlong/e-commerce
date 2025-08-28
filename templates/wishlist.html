@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include 'includes/head.html' %}
+
+<body>
+    <header>
+        {% include 'includes/navbar.html' %}
+    </header>
+    <main class="container my-5">
+        <h2 class="mb-4">Wishlist</h2>
+        <table class="cart-table table table-bordered">
+            <thead>
+                <tr class="table-primary">
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="wishlist-items"></tbody>
+        </table>
+        <div class="cart-summary text-end mt-4">
+            <a href="{{ url_for('shop') }}" class="btn btn-primary">Continue Shopping</a>
+        </div>
+    </main>
+
+    <footer class="footer bg-dark text-white">
+        {% include 'includes/footer.html' %}
+    </footer>
+
+
+</body>
+
+</html>
